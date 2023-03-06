@@ -1,0 +1,211 @@
+*{
+    color: #edf0f1;
+    margin: auto;
+    padding: 0;
+}
+body{
+    width: 80%;
+    background-color: #030303;
+}
+header{
+    padding:10px 0px;
+    /* width: 100%; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(22, 22, 22);
+}
+header img{
+    width: 100px;
+    cursor: pointer;
+}
+header .Search-Bar-Container{
+    position: relative;
+}
+header .Search-Bar-Container input[type=search]{
+    border:1px solid red;
+    outline:none;
+    height: 35px;
+    width: 400px;
+    padding:10px;
+    border-radius:5px 0px 0px 5px;
+    background-color: #25252500;
+}
+::placeholder {
+    font-family: 'Space Grotesk';
+    font-size: 14px;
+    padding-left:20px;
+    color:rgb(192, 192, 192);
+}
+header .Search-Bar-Container button{
+    position: relative;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 35px;
+    cursor:pointer;
+    background-color:#25252500;
+    border: 1px solid red;
+    border-radius:0px 5px 5px 0px;
+    float: right;
+}
+header .Search-Bar-Container button i{
+    color:red;
+}
+header .Search-Bar-Container button:hover{
+    background-color: #3b3b3b;
+}
+header nav li, a{
+    font-family: 'Space Grotesk', serif;
+    list-style: none;
+    text-decoration: none;
+}
+header .Nav-Links li{
+    position: relative;
+    display:inline-block;
+    padding:0px 20px;
+}
+header .Nav-Links li a:hover{
+    color:red;
+    scale: 105%;
+}
+header .Nav-Links .Categories::after{
+    content:'\f0d7';
+    font-family: "Font Awesome 6 Free";
+    font-size:20px;
+    cursor: pointer;
+    font-weight:800;
+    color: red;
+    padding-left:7px;
+}
+header .Nav-Links .Watchlist::before{
+    content: '\f02e';
+    font-family: "Font Awesome 6 Free";
+    font-size:18px;
+    font-weight:800;
+    cursor: pointer;
+    color: red;
+    padding-right:7px;
+}
+header .Nav-Links .Account::before{
+    content:'\f2bd';
+    font-family: "Font Awesome 6 Free";
+    font-size:20px;
+    cursor: pointer;
+    font-weight:800;
+    color: red;
+    padding-right:7px;
+}
+/* Categories Dropdown */
+header .Nav-Links .Categories-Dropdown {
+    position: absolute;
+    width: 180px;
+    left:0;
+    background-color: rgb(22, 22, 22);
+    padding-top: 25px;
+    display: none;
+}
+header .Nav-Links .Categories-Dropdown li {
+    cursor: pointer;
+    padding-bottom: 25px;
+}
+header .Nav-Links .Categories-Dropdown li:hover {
+    color: red;
+    scale: 110%;
+}
+header .Nav-Links .Categories:hover .Categories-Dropdown {
+    display: block;
+}
+/* Account Dropdown */
+header .Nav-Links .Account-Dropdown{
+    position: absolute;
+    width: 210px;
+    background-color: rgb(22, 22, 22);
+    padding-top:25px;
+    left: 0;
+    display:none;
+}
+header .Nav-Links .Account-Dropdown li{
+    cursor: pointer;
+    padding-bottom:25px;
+}
+header .Nav-Links .Account-Dropdown li:hover{
+    color: red;
+    scale: 105%;
+}
+header .Nav-Links .Account:hover .Account-Dropdown{
+    display: block;
+}
+/* NavBar MQ */
+@media screen and (min-width:320px){
+
+    body{
+        width: 100%;
+    }
+    #Burger-Menu::before{
+        position: relative;
+        content: '\f0c9';
+        font-family: "Font Awesome 6 Free";
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 800;
+        color: red;
+        padding: 10px;
+    }
+    #Burger-Menu::before:hover .Categories-Dropdown{
+        display: block;
+    }
+
+/* Categories Dropdown */
+    header .Nav-Links .Categories-Dropdown {
+        width: 130px;
+        left: -230px;
+        background-color: rgb(22, 22, 22);
+        padding-left:15px;
+        padding-top: 25px;
+        display: none;
+    }
+    header .Nav-Links .Categories:hover .Categories-Dropdown {
+        display: none;
+    }
+
+    header img {
+        padding-left:10px;
+        width: 100px;
+    }
+    header .Search-Bar-Container input[type=search] {
+        display:none;
+    }
+    header .Search-Bar-Container button {
+        transform: translateX(25px);
+        padding-right:20px;
+        scale: 120%;
+        width: 40px;
+        height: 35px;
+        cursor: pointer;
+        border: 0;
+    }
+    header .Nav-Links li{
+        padding:0px 5px;
+    }
+
+/* Clear Nav Link Names */
+
+    header nav li, a{
+        display: none;
+    }
+    header .Nav-Links .Categories::after {
+        display:none;
+    }
+
+/* Account Dropdown */
+
+    header .Nav-Links .Account-Dropdown {
+        width: 150px;
+        left: -100px;
+    }
+
+    header .Nav-Links .Account-Dropdown li {
+        padding: 10px 15px;
+    }
+}
