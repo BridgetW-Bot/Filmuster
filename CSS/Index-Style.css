@@ -1,149 +1,220 @@
-*{
+* {
     color: #edf0f1;
     margin: auto;
     padding: 0;
 }
-body{
+
+body {
     width: 80%;
     background-color: #030303;
 }
-header{
-    padding:10px 0px;
+
+header {
+    padding: 10px 0px;
     /* width: 100%; */
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(22, 22, 22);
+    background-color: rgb(22, 22, 22);
+    margin-bottom: 50px;
+    position: sticky;
+    z-index: 1000;
 }
-header img{
+
+header img {
     width: 100px;
     cursor: pointer;
 }
-header .Search-Bar-Container{
+
+header .Search-Bar-Container {
     position: relative;
 }
-header .Search-Bar-Container input[type=search]{
-    border:1px solid red;
-    outline:none;
+
+header .Search-Bar-Container input[type=search] {
+    border: 1px solid red;
+    outline: none;
     height: 35px;
     width: 400px;
-    padding:10px;
-    border-radius:5px 0px 0px 5px;
+    padding: 10px;
+    border-radius: 5px 0px 0px 5px;
     background-color: #25252500;
+    overflow: hidden;
 }
+
 ::placeholder {
     font-family: 'Space Grotesk';
     font-size: 14px;
-    padding-left:20px;
-    color:rgb(192, 192, 192);
+    padding-left: 20px;
+    color: rgb(192, 192, 192);
 }
-header .Search-Bar-Container button{
+
+header .Search-Bar-Container button {
     position: relative;
     border: none;
     outline: none;
     width: 60px;
     height: 35px;
-    cursor:pointer;
-    background-color:#25252500;
+    cursor: pointer;
+    background-color: #25252500;
     border: 1px solid red;
-    border-radius:0px 5px 5px 0px;
+    border-radius: 0px 5px 5px 0px;
     float: right;
 }
-header .Search-Bar-Container button i{
-    color:red;
+
+header .Search-Bar-Container button i {
+    color: red;
 }
-header .Search-Bar-Container button:hover{
+
+header .Search-Bar-Container button:hover {
     background-color: #3b3b3b;
 }
-header nav li, a{
+
+header nav li,
+a {
     font-family: 'Space Grotesk', serif;
     list-style: none;
     text-decoration: none;
 }
-header .Nav-Links li{
+
+header .Nav-Links li {
     position: relative;
-    display:inline-block;
-    padding:0px 20px;
+    display: inline-block;
+    padding: 0px 20px;
 }
-header .Nav-Links li a:hover{
-    color:red;
+
+header .Nav-Links li a:hover {
+    color: red;
     scale: 105%;
 }
-header .Nav-Links .Categories::after{
-    content:'\f0d7';
+
+header .Nav-Links .Categories::after {
+    content: '\f0d7';
     font-family: "Font Awesome 6 Free";
-    font-size:20px;
+    font-size: 20px;
     cursor: pointer;
-    font-weight:800;
+    font-weight: 800;
+    width: 20px;
+    align-items: center;
+    transform: translateY(2px);
+    /* background-color: white; */
     color: red;
-    padding-left:7px;
+    padding-left: 5px;
+    transform-origin: center center;
+    transition: all .5s ease-in-out;
 }
-header .Nav-Links .Watchlist::before{
+
+header .Nav-Links .Categories:hover::after {
+    transform: rotate(180deg);
+}
+
+header .Nav-Links .Watchlist::before {
     content: '\f02e';
     font-family: "Font Awesome 6 Free";
-    font-size:18px;
-    font-weight:800;
+    font-size: 18px;
+    font-weight: 800;
     cursor: pointer;
     color: red;
-    padding-right:7px;
+    padding-right: 7px;
 }
-header .Nav-Links .Account::before{
-    content:'\f2bd';
+
+header .Nav-Links .Account::before {
+    content: '\f2bd';
     font-family: "Font Awesome 6 Free";
-    font-size:20px;
+    font-size: 20px;
     cursor: pointer;
-    font-weight:800;
+    font-weight: 800;
     color: red;
-    padding-right:7px;
+    padding-right: 7px;
 }
+
 /* Categories Dropdown */
 header .Nav-Links .Categories-Dropdown {
     position: absolute;
     width: 180px;
-    left:0;
+    left: 0;
     background-color: rgb(22, 22, 22);
     padding-top: 25px;
+    border-radius: 7px;
     display: none;
+    transform-origin: top center;
+    animation: show-Dropdown .5s ease-in-out forwards;
 }
+
+@keyframes show-Dropdown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 header .Nav-Links .Categories-Dropdown li {
     cursor: pointer;
     padding-bottom: 25px;
+    transition: transform .2s ease-in-out;
 }
+
 header .Nav-Links .Categories-Dropdown li:hover {
     color: red;
-    scale: 110%;
+    transform: scale(1.1);
 }
+
 header .Nav-Links .Categories:hover .Categories-Dropdown {
     display: block;
 }
+
 /* Account Dropdown */
-header .Nav-Links .Account-Dropdown{
+header .Nav-Links .Account-Dropdown {
     position: absolute;
-    width: 210px;
+    width: 190px;
     background-color: rgb(22, 22, 22);
-    padding-top:25px;
+    border-radius: 7px;
+    padding: 25px 0px 20px 20px;
     left: 0;
-    display:none;
+    display: none;
+    transform-origin: top center;
+    animation: show-Dropdown .5s ease-in-out forwards;
 }
-header .Nav-Links .Account-Dropdown li{
+
+header .Nav-Links .Account-Dropdown li {
     cursor: pointer;
-    padding-bottom:25px;
+    padding-bottom: 25px;
+    transition: transform .2s ease-in-out;
 }
-header .Nav-Links .Account-Dropdown li:hover{
+
+header .Nav-Links .Account-Dropdown li:hover {
     color: red;
-    scale: 105%;
+    transform: scale(1.1);
 }
-header .Nav-Links .Account:hover .Account-Dropdown{
+
+header .Nav-Links .Account:hover .Account-Dropdown {
     display: block;
 }
-/* NavBar MQ */
-@media screen and (min-width:320px){
 
-    body{
+/* ? Change Max-Width to Min-width */
+
+/*! NavBar MQ */
+@media screen and (min-width:320px) {
+
+    body {
         width: 100%;
     }
-    #Burger-Menu::before{
+
+    #Burger-Menu {
         position: relative;
+    }
+
+    :is(#Burger-Menu:hover, #Burger-Menu:focus-within) .Categories-Dropdown {
+        display: block;
+    }
+
+    #Burger-Menu::after {
         content: '\f0c9';
         font-family: "Font Awesome 6 Free";
         font-size: 20px;
@@ -152,53 +223,56 @@ header .Nav-Links .Account:hover .Account-Dropdown{
         color: red;
         padding: 10px;
     }
-    #Burger-Menu::before:hover .Categories-Dropdown{
-        display: block;
-    }
 
-/* Categories Dropdown */
+    /* ? Fix Menu dropdown */
+
+    /* Categories Dropdown */
     header .Nav-Links .Categories-Dropdown {
         width: 130px;
         left: -230px;
-        background-color: rgb(22, 22, 22);
-        padding-left:15px;
+        padding-left: 15px;
         padding-top: 25px;
         display: none;
     }
+
     header .Nav-Links .Categories:hover .Categories-Dropdown {
         display: none;
     }
 
     header img {
-        padding-left:10px;
+        padding-left: 10px;
         width: 100px;
     }
+
     header .Search-Bar-Container input[type=search] {
-        display:none;
+        display: none;
     }
+
     header .Search-Bar-Container button {
         transform: translateX(25px);
-        padding-right:20px;
+        padding-right: 20px;
         scale: 120%;
         width: 40px;
         height: 35px;
-        cursor: pointer;
         border: 0;
     }
-    header .Nav-Links li{
-        padding:0px 5px;
+
+    header .Nav-Links li {
+        padding: 0px 5px;
     }
 
-/* Clear Nav Link Names */
+    /* Clear Nav Link Names */
 
-    header nav li, a{
+    header nav li,
+    a {
         display: none;
     }
+
     header .Nav-Links .Categories::after {
-        display:none;
+        display: none;
     }
 
-/* Account Dropdown */
+    /* Account Dropdown */
 
     header .Nav-Links .Account-Dropdown {
         width: 150px;
@@ -208,4 +282,209 @@ header .Nav-Links .Account:hover .Account-Dropdown{
     header .Nav-Links .Account-Dropdown li {
         padding: 10px 15px;
     }
+}
+
+@media screen and (min-width:768px) {
+    header img {
+        width: 140px;
+        transform: translateX(-100px);
+    }
+
+    header .Search-Bar-Container button {
+        transform: translateX(90px);
+        padding-right: 40px;
+        scale: 150%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    #Burger-Menu {
+        display: none;
+    }
+
+    header img {
+        width: 140px;
+        transform: translateX(0px);
+    }
+
+    header .Search-Bar-Container input[type=search] {
+        height: 35px;
+        width: 200px;
+        display: inline-block;
+    }
+
+    header .Search-Bar-Container button {
+        width: 35px;
+        height: 35px;
+        border: 1px solid red;
+        transform: translateX(0px);
+        padding-right: 0px;
+        scale: 100%;
+    }
+
+    header nav li,
+    a {
+        display: inline-block;
+    }
+
+    header .Nav-Links li {
+        padding: 0px 20px;
+    }
+
+    header .Nav-Links .Categories::after {
+        display: inline-block;
+    }
+
+    /* Categories Dropdown */
+    header .Nav-Links .Categories-Dropdown {
+        position: absolute;
+        width: 140px;
+        left: 0;
+        background-color: rgb(22, 22, 22);
+        padding-top: 25px;
+        border-radius: 7px;
+        display: none;
+    }
+
+    header .Nav-Links .Categories:hover .Categories-Dropdown {
+        display: block;
+    }
+
+    /* Account Dropdown */
+    header .Nav-Links .Account-Dropdown {
+        left: 0;
+        display: none;
+    }
+
+    header .Nav-Links .Account:hover .Account-Dropdown {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    body {
+        width: 80%;
+    }
+
+    header .Search-Bar-Container input[type=search] {
+        width: 300px;
+    }
+
+    header .Search-Bar-Container button {
+        width: 50px;
+    }
+}
+
+/* Hero Section */
+.Hero-Sctn{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    /* width: 80%; */
+    margin: auto;
+    /* background-color: white; */
+    overflow-y: hidden;
+}
+.Hero-Sctn .Cards-Container{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+.Hero-Sctn .Cards-Container .Card{
+    width: 400px;
+    position: relative;
+    /* background-color: rgb(170, 255, 0); */
+    display: block;
+}
+.Hero-Sctn .Cards-Container .Card img{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    object-fit:cover;
+    z-index: 2;
+}
+.Hero-Sctn .Cards-Container .Card::after {
+    content: '';
+    position: absolute;
+    top:0; bottom:0; left:0; right:0;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0)20%, rgba(102, 2, 2, 0));
+    z-index: 0;
+    transition: all 1s ease-in-out;
+}
+.Hero-Sctn .Cards-Container .Card:hover::after{
+    background-image: linear-gradient(rgba(0, 0, 0, 0)20%, rgb(102, 1, 1));
+}
+.Hero-Sctn .Cards-Container .Card .Content-Container{
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    width: 300px;
+    margin: 0 auto;
+    z-index: 1;
+    display:none;
+}
+.Hero-Sctn .Cards-Container .Card:hover .Content-Container{
+    display:block;
+}
+.Hero-Sctn .Cards-Container .Card .About{
+    display: flex;
+    line-height: 25px;
+    text-align: center;
+}
+.Hero-Sctn .Cards-Container .Card .About p{
+    font-family: 'Space Grotesk';
+    text-transform: uppercase;
+}
+.Hero-Sctn .Cards-Container .Card .About .Rate{
+    font-weight: 600;
+    color: rgb(191, 255, 0);
+}
+.Hero-Sctn .Cards-Container .Card .About .Rate::before{
+    content: '\f005';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 800;
+    padding-right: 7px;
+}
+.Hero-Sctn .Cards-Container .Card button{
+    outline: none;
+    border: 0;
+    padding:12px;
+    margin: 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.Hero-Sctn .Cards-Container .Card button:hover{
+    transform:scale(1.1);
+}
+.Hero-Sctn .Cards-Container .Card button:first-of-type{
+    width: 120px;
+    background-color: red;
+}
+.Hero-Sctn .Cards-Container .Card button:first-of-type::before{
+    content: '\f144';
+    font-family: 'Font Awesome 6 Free';
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 7px;
+}
+.Hero-Sctn .Cards-Container .Card button:last-of-type{
+    background-color: rgb(191, 255, 0);
+    color: black;
+    width: 130px;
+    align-items: center;
+}
+.Hero-Sctn .Cards-Container .Card button:last-of-type::before{
+    content: '\f0fe';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 10px;
 }
