@@ -55,14 +55,75 @@
     </nav>
 </header>
 
+<!-- Hero Section -->
 <div class="Hero-Sctn">
+    <div class="Hero-Container">
+        
+        <div class="Main">
+            <img src="../Images/CCB-Snap-01.jpg" alt="Click click bang cover">
+            <img class="Cover" src="../Images/Click-Click-Bang.jpg" alt="">
+
+            <div class="CTA">
+                <i class="fa-regular fa-circle-play" onclick="PlayVideo('../Videos/Click Click Bang Official Trailer(720p).mp4')"></i>
+                <div class="Copy">
+                    <h3>Click Click Bang</h3>
+                    <p>Watch Trailer</p>
+                </div>
+                 
+            </div>  
+        </div>
+
+        <div class="Left-Container">
+            <div class="Left">
+                <img src="../Images/Morning-After.jpg" alt="">
+                <div class="Content">
+                    <h3>The making of 'The Morning After'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Video</p>
+                </div>
+            </div>
+            <div class="Left">
+                <img src="../Images/Just-In-Time.jpg" alt="">
+                <div class="Content">
+                    <h3>Q&A with the Cast behind 'Just in Time'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Video</p>
+                </div>
+            </div>
+            <div class="Left">
+                <img src="../Images/County-49.jpg" alt="">
+                <div class="Content">
+                    <h3>The making of 'The Morning After'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Trailer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="VideoPlayer" id="Video_Player">
+        <video id="HeroVideo" width="100%" controls="controls" type="video/mp4" autoplay ><source src="../Videos/Click Click Bang Official Trailer(720p).mp4" type="video/mp4"> Your browser does not support the video tag</video>
+
+        <i class="fa-regular fa-circle-xmark" onclick="StopVideo()"></i>
+    </div>
+</div>
+
+<!-- Popular Movies Section -->
+<div class="Popular-Sctn">
+    <h2>Popular</h2>
     <div class="Cards-Container">
         <div class="Card">
             <img src="../Images/Click-Click-Bang.jpg" alt="Click-Click-Bang">
             <div class="Content-Container">
                 <div class="About">
-                <p class="Rate">9.0</p>
-                <p>(2022) Action. Comedy. Drama</p>
+                    <p class="Rate">9.0</p>
+                    <p>(2022) Action. Comedy. Drama</p>
             </div>
                 <button>Trailer</button>
                 <button>Watchlist</button>
@@ -109,6 +170,20 @@
 </div>
 
 
+<script>
+    var VideoPlayer = document.getElementById("Video_Player");
+    var HeroVideo = document.getElementById("HeroVideo");
+
+    function PlayVideo(file){
+        HeroVideo.src = file;
+        VideoPlayer.style.display = "block";
+    }
+
+    function StopVideo(){
+        VideoPlayer.style.display = "none";
+    }
+
+</script>
 
 </body>
 
