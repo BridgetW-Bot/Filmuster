@@ -26,7 +26,8 @@
 
 <header>
     <span id="Burger-Menu"></span>
-    <img src="../Images/Filmuster-Logo-02.png" alt="Logo">
+    <a href="Index.html"><img src="../Images/Filmuster-Logo-02.png" alt="Logo"></a>
+    
     <div class="Search-Bar-Container">
         <input type="search" placeholder="Search" name="" id="">
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -73,6 +74,14 @@
             </div>  
         </div>
 
+        <div class="VideoPlayer" id="Video_Player">
+            <video id="HeroVideo" width="100%" controls="controls" type="video/mp4">
+                <source src="../Videos/Click Click Bang Official Trailer(720p).mp4"> Your browser does not support the video tag
+            </video>
+        
+            <i class="fa-regular fa-circle-xmark" onclick="StopVideo()"></i>
+        </div>
+
         <div class="Left-Container">
             <div class="Left">
                 <img src="../Images/Morning-After.jpg" alt="">
@@ -107,26 +116,24 @@
         </div>
     </div>
 
-    <div class="VideoPlayer" id="Video_Player">
-        <video id="HeroVideo" width="100%" controls="controls" type="video/mp4" autoplay ><source src="../Videos/Click Click Bang Official Trailer(720p).mp4" type="video/mp4"> Your browser does not support the video tag</video>
-
-        <i class="fa-regular fa-circle-xmark" onclick="StopVideo()"></i>
-    </div>
 </div>
 
 <!-- Popular Movies Section -->
 <div class="Popular-Sctn">
     <h2>Popular</h2>
-    <div class="Cards-Container">
+    
+    <div class="Cards-Container" >
         <div class="Card">
-            <img src="../Images/Click-Click-Bang.jpg" alt="Click-Click-Bang">
+            <img src="../Images/African-Folktales/African-Folktales-Cover.jpg" alt="">
             <div class="Content-Container">
                 <div class="About">
                     <p class="Rate">9.0</p>
-                    <p>(2022) Action. Comedy. Drama</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Drama</p>
             </div>
                 <button>Trailer</button>
-                <button>Watchlist</button>
+                <button class="Comment">Review</button>
+                <button></button>
             </div>
         </div>
 
@@ -135,34 +142,72 @@
             <div class="Content-Container">
                 <div class="About">
                     <p class="Rate">9.0</p>
-                    <p>(2022) Action. Comedy. Drama</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama.Suspense</p>
                 </div>
                 <button>Trailer</button>
-                <button>Watchlist</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
             </div>
         </div>
 
         <div class="Card">
-            <img src="../Images/Kamtupe.jpg" alt="Click-Click-Bang">
+            <img src="../Images/Kamtupe.jpg" alt="">
             <div class="Content-Container">
                 <div class="About">
-                    <p class="Rate">9.0</p>
-                    <p>(2022) Action. Comedy. Drama</p>
+                    <p class="Rate">8.4</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama. Crime</p>
                 </div>
                 <button>Trailer</button>
-                <button>Watchlist</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
             </div>
         </div>
 
         <div class="Card">
-            <img src="../Images/40-Sticks.jpg" alt="Click-Click-Bang">
+            <img src="../Images/40-Sticks.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">7.8</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Mission-To-Rescue.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.2</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Crime.</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Christmas-Love.jpg" alt="">
             <div class="Content-Container">
                 <div class="About">
                     <p class="Rate">9.0</p>
-                    <p>(2022) Action. Comedy. Drama</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Comedy. Drama</p>
                 </div>
                 <button>Trailer</button>
-                <button>Watchlist</button>
+                <button class="Comment">Review</button>
+                <button></button>
             </div>
         </div>
 
@@ -181,6 +226,10 @@
 
     function StopVideo(){
         VideoPlayer.style.display = "none";
+    }
+
+    function openPage() {
+        window.open("http://127.0.0.1:5500/HTML/NWU.html", "_self");
     }
 
 </script>
