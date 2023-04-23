@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.Sign-Up {
+.Login {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -13,10 +13,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.492); */
+    /* background-color: rgba(0, 0, 0, 0.439); */
 }
 
-.Sign-Up::before {
+.Login::before {
     content: '';
     position: absolute;
     top: 0;
@@ -30,29 +30,30 @@
     z-index: -1;
 }
 
-.Sign-Up img {
+.Login img {
     width: 200px;
     margin-bottom: 20px;
 }
 
-.Sign-Up .Form {
+.Login .Form {
     display: flex;
     width: 20%;
     right: 0px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.483);
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.243);
     padding: 20px;
     flex-direction: column;
     background: transparent;
     backdrop-filter: blur(20px);
 }
 
-.Sign-Up .Form h2 {
+.Login .Form h2 {
     margin-bottom: 20px;
     color: white;
 }
 
-.Sign-Up form input {
+.Login form input {
     width: 80%;
     margin-bottom: 20px;
     padding: 12px 7px;
@@ -63,8 +64,10 @@
     font-family: 'Space Grotesk';
     font-size: 14px;
 }
-
-.Sign-Up form input[type=text],
+::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+.Login form input[type=text],
 input[type=password],
 input[type=email] {
     font-family: 'Space Grotesk';
@@ -72,24 +75,24 @@ input[type=email] {
     color: white;
 }
 
-.Sign-Up .Form .Pass-Visual {
+.Login .Form .Pass-Visual {
     display: flex;
     justify-content: flex-start;
     transform: translate(35px, -10px);
     margin: 10px 0px;
 }
 
-.Sign-Up .Form .Pass-Visual i {
+.Login .Form .Pass-Visual i {
     color: rgb(191, 255, 0);
     cursor: pointer;
 }
 
-.Sign-Up .Form .Pass-Visual p {
+.Login .Form .Pass-Visual p {
     padding-left: 10px;
     font-size: 12px;
 }
 
-.Sign-Up form button {
+.Login form button {
     width: 85%;
     background-color: firebrick;
     outline: none;
@@ -98,35 +101,36 @@ input[type=email] {
     border-radius: 10px;
     color: white;
     font-family: 'Space Grotesk';
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.232); */
     margin-bottom: 20px;
 }
 
-.Sign-Up form button:hover {
+.Login form button:hover {
     transform: scale(1.02);
     background-color: rgb(208, 41, 41)
 }
 
-.Sign-Up form input:hover {
-    border: 1px solid rgb(255, 255, 255);
+.Login form input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.232);
 }
 
-.Sign-Up .Form p,
+.Login .Form p,
 a {
     font-family: 'Space Grotesk';
     font-size: 14px;
     color: white;
 }
 
-.Sign-Up .Form p a:hover {
+.Login .Form p a:hover {
     color: rgb(191, 255, 0);
 }
 
 /* Icons */
-.Sign-Up .Form #Name {
+.Login .Form #Name {
     position: relative;
 }
 
-.Sign-Up .Form #Name::after {
+.Login .Form #Name::after {
     content: '\f007';
     font-family: 'Font Awesome 6 Free';
     font-weight: 800;
@@ -136,11 +140,11 @@ a {
     top: 12px;
 }
 
-.Sign-Up .Form #Email {
+.Login .Form #Email {
     position: relative;
 }
 
-.Sign-Up .Form #Email::after {
+.Login .Form #Email::after {
     content: '\f0e0';
     font-family: 'Font Awesome 6 Free';
     font-weight: 800;
@@ -150,11 +154,24 @@ a {
     top: 12px;
 }
 
-.Sign-Up .Form #Password {
+.Login .Form #Password {
     position: relative;
+    transform: translateY(15px);
+    margin-bottom: 20px;
 }
 
-.Sign-Up .Form #Password::after {
+.Login .Form #Password a {
+    position: absolute;
+    font-size: 12px;
+    right: 40px;
+    top: -20px;
+}
+
+.Login .Form #Password a:hover {
+    color: rgba(191, 255, 0, 0.587);
+}
+
+.Login .Form #Password::after {
     content: '\f023';
     font-family: 'Font Awesome 6 Free';
     font-weight: 800;
@@ -162,4 +179,13 @@ a {
     position: absolute;
     right: 50px;
     top: 12px;
+}
+
+.Login .Form .RememberMe {
+    display: flex;
+    background-color: darkgoldenrod;
+}
+
+.Login .Form .RememberMe input[type=checkbox] {
+    height: 20px;
 }
