@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmuster</title>
+
+    <link rel="stylesheet" href="../CSS/Index-Style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<header>
+    <span id="Burger-Menu"></span>
+    <a href="Index.html"><img src="../Images/Filmuster-Logo-02.png" alt="Logo"></a>
+    
+    <div class="Search-Bar-Container">
+        <input type="search" placeholder="Search" name="" id="">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    
+    <nav class="Nav-Links">
+        <ul>
+            <li class="Categories"><a href="#">Categories</a>
+                <ul class="Categories-Dropdown">
+                    <li><a href="#"></a>Movies</li>
+                    <li><a href="#"></a>TV Shows</li>
+                    <li><a href="#"></a>Animations</li>
+                    <li><a href="#"></a>Interviews</li>
+                </ul>
+            </li>
+            <li class="Watchlist"><a href="Watchlist.html">Watchlist</a></li>
+            <li class="Account"><a href="#">Account</a>
+                <ul class="Account-Dropdown">
+                    <li><a href="#"></a>Your Activity</li>
+                    <li><a href="#"></a>Your ratings</li>
+                    <li><a href="#"></a>Settings</li>
+                    <li><a href="#"></a>Sign Out</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="Hero-Sctn">
+    <div class="Hero-Container">
+        
+        <div class="Main">
+            <img src="../Images/CCB-Snap-01.jpg" alt="Click click bang cover">
+            <img class="Cover" src="../Images/Click-Click-Bang.jpg" alt="">
+
+            <div class="CTA">
+                <i class="fa-regular fa-circle-play" onclick="PlayVideo('../Videos/Click Click Bang Official Trailer(720p).mp4')"></i>
+                <div class="Copy">
+                    <h3>Click Click Bang</h3>
+                    <p>Watch Trailer</p>
+                </div>
+                 
+            </div>  
+        </div>
+
+        <div class="VideoPlayer" id="Video_Player">
+            <video id="HeroVideo" width="100%" controls="controls" type="video/mp4">
+                <source src="../Videos/Click Click Bang Official Trailer(720p).mp4"> Your browser does not support the video tag
+            </video>
+        
+            <i class="fa-regular fa-circle-xmark" onclick="StopVideo()"></i>
+        </div>
+
+        <div class="Left-Container">
+            <div class="Left">
+                <img src="../Images/Morning-After.jpg" alt="">
+                <div class="Content">
+                    <h3>The making of 'The Morning After'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Video</p>
+                </div>
+            </div>
+            <div class="Left">
+                <img src="../Images/Just-In-Time.jpg" alt="">
+                <div class="Content">
+                    <h3>Q&A with the Cast behind 'Just in Time'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Video</p>
+                </div>
+            </div>
+            <div class="Left">
+                <img src="../Images/County-49.jpg" alt="">
+                <div class="Content">
+                    <h3>The making of 'The Morning After'</h3>
+                </div>
+                <div class="CTA">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch Trailer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Popular Movies Section -->
+<div class="Popular-Sctn">
+    <h2>Popular</h2>
+    
+    <div class="Cards-Container" >
+        <div class="Card">
+            <img src="../Images/Uradi_02.jpeg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('uradi.html')"></i>
+                    <p>Drama</p>
+            </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/African-Folktales/African-Folktales-Cover.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama.Suspense</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Kamtupe.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.4</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama. Crime</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/40-Sticks.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">7.8</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Mission-To-Rescue.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.2</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Crime.</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Christmas-Love.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Comedy. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- From Your Watchlist Section -->
+<div class="Watchlist-Sctn">
+    <h2>From your Watchlist</h2>
+
+    <div class="Watchlist-Cards-Container">
+        <div class="Card">
+            <img src="../Images/Disconnect.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/County-49.jpg" alt="Click-Click-Bang">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama.Suspense</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Just-In-Time.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.4</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama. Crime</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Nafsi.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">7.8</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Pepeta.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.2</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Crime.</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Selina.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Comedy. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Top Ten -->
+<div class="Top10Sctn">
+    <h2>Top 10 on Filmuster this week</h2>
+
+    <div class="Top10Sctn-Cards-Container">
+        <div class="Card">
+            <img src="../Images/Uradi_02.jpeg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Rafiki.jpg" alt="Click-Click-Bang">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama.Suspense</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/RHO_Nairobi.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.4</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama. Crime</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Nairobi-Half-Life.png" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">7.8</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Terastorm.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">8.2</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Action. Crime.</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+
+            </div>
+        </div>
+
+        <div class="Card">
+            <img src="../Images/Plan B.jpg" alt="">
+            <div class="Content-Container">
+                <div class="About">
+                    <p class="Rate">9.0</p>
+                    <i class="fa-solid fa-circle-info Info" onclick="openPage('NWU.html')"></i>
+                    <p>Comedy. Drama</p>
+                </div>
+                <button>Trailer</button>
+                <button class="Comment">Review</button>
+                <button></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    var VideoPlayer = document.getElementById("Video_Player");
+    var HeroVideo = document.getElementById("HeroVideo");
+
+    function PlayVideo(file){
+        HeroVideo.src = file;
+        VideoPlayer.style.display = "block";
+    }
+
+    function StopVideo(){
+        VideoPlayer.style.display = "none";
+    }
+
+    function openPage() {
+        window.open("http://127.0.0.1:5500/HTML/Uradi.html", "_self");
+    }
+
+</script>
+
+</body>
+
+</html>
